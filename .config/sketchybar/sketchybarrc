@@ -1,0 +1,56 @@
+#!/bin/sh
+
+ITEM_DIR="${CONFIG_DIR}/items"
+PLUGIN_DIR="${CONFIG_DIR}/plugins"
+
+source "${CONFIG_DIR}/colors.sh"
+
+sketchybar --bar display=main \
+  height=35 \
+  blur_radius=30 \
+  position=top \
+  sticky=on \
+  padding_left=15 \
+  padding_right=15 \
+  color=$BAR_COLOR \
+  margin=0 \
+  corner_radius=0 \
+  y_offset=0
+
+sketchybar --default icon.font="JetBrainsMono Nerd Font:Bold:11.0" \
+  icon.color=$ICON_COLOR \
+  label.font="JetBrainsMono Nerd Font:Bold:11.0" \
+  label.color=$ICON_COLOR \
+  padding_left=4 \
+  padding_right=4 \
+  label.padding_left=4 \
+  label.padding_right=4 \
+  icon.padding_left=4 \
+  icon.padding_right=4
+
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/spacer.sh" 1 left
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/spacer.sh" 3 left
+source "$ITEM_DIR/front-app.sh"
+
+source "$ITEM_DIR/media.sh"
+source "$ITEM_DIR/status.sh"
+source "$ITEM_DIR/spacer.sh" 2 right
+
+sketchybar --move media after clock
+sketchybar --move battery before clock
+
+sketchybar --add bracket left.side '/space\..*/' \
+  --set left.side background.color=$(getcolor black 100) \
+  background.corner_radius=3 \
+  background.height=20 \
+  --add bracket right.side clock battery media \
+  --set right.side background.color=$(getcolor purple 0) \
+  background.corner_radius=3 \
+  background.height=20
+
+# sketchybar --move music before right.side
+# sketchybar --move spacer.2 after right.side
+
+sketchybar --update
