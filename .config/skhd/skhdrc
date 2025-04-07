@@ -25,7 +25,7 @@ shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
-ctrl + alt - backspace : yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 4:4:1:1:2:2
+alt - w : yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 4:4:1:1:2:2
 
 alt - q : yabai -m window --close
 
@@ -33,7 +33,6 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
 
 alt - a : open -a Arc
-# alt - return : /Applications/WezTerm.app/Contents/MacOS/wezterm
-alt - return : open -na WezTerm
+alt - return : open -na Alacritty
 
 ctrl + alt + cmd - r : yabai --restart-service

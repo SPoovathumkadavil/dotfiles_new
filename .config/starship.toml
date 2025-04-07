@@ -6,7 +6,7 @@
 #[└─](bold black)$character"""
 
 format = """
-(bold blue)$username$directory$git_branch$git_status$go$python(bold blue)$character"""
+(bold white)$username$directory(bold white)$character"""
 
 
 # Wait 10 milliseconds for starship to check files under the current directory.
@@ -17,26 +17,26 @@ scan_timeout = 10
 add_newline = false
 
 [character]
-success_symbol = "[❯❯❯](bold blue)"
-error_symbol = "[❯❯❯](bold red)"
+success_symbol = "[❯](bold white)"
+error_symbol = "[? ❯](bold white)"
 
 
 [time]
 disabled = false
-format = '[\[$time\]](cyan) '
+format = '[\[$time\]](white) '
 time_format = "%T"
 utc_time_offset = "+7"
 
 [username]
-style_user = "green bold"
-style_root = "red bold"
+style_user = "white bold"
+style_root = "white bold"
 format = "[$user]($style) "
 disabled = false
 show_always = true
 
 [cmd_duration]
 min_time = 100
-format = "underwent [$duration](bold purple)"
+format = "underwent [$duration](bold white)"
 
 [directory]
-style = "purple"
+style = "white"

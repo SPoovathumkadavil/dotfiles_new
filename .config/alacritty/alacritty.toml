@@ -11,8 +11,8 @@ opacity = 0.9
 
 [font]
 
-normal = { family = "Monaco Nerd Font Mono" }
-size = 12
+normal = { family = "JetBrainsMono Nerd Font" }
+size = 13
 
 [colors.primary]
 background = "#181825"
@@ -79,4 +79,3 @@ color = "#fab387"
 [[colors.indexed_colors]]
 index = 17
 color = "#f5e0dc"
-

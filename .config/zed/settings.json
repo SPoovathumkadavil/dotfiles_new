@@ -32,7 +32,17 @@
   },
   "lsp": {
     "java": {
-      "settings": {},
+      "settings": {
+        "java.jdt.ls.java.home": "/Users/sally/wpilib/2025/jdk",
+        "java.configuration.runtimes": [
+          {
+            "name": "JavaSE-17",
+            "path": "/Users/sally/wpilib/2025/jdk",
+            "default": true
+          }
+        ],
+        "java.completion.matchCase": "off"
+      },
       "initialization_options": {}
     }
   },

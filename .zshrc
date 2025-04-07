@@ -80,6 +80,7 @@ export PATH="$PATH:/Users/sally/.local/scripts"
 export PATH="$PATH:/Users/sally/.cargo/bin"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$PATH:/Users/sally/.config/emacs/bin"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 export CMAKE_PREFIX_PATH="/Users/sally/.local/library/libs:$CMAKE_PREFIX_PATH"
 
