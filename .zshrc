@@ -1,4 +1,16 @@
 
+if [[ ! -v TMUX && $TERM_PROGRAM != "vscode" ]]; then
+  # output_names=($(tmux list-sessions -F\#S))
+  # exec tmux attach -t "${output_names[0]}"
+  tmux has-session -t "main" 2>/dev/null
+
+  if [ $? != 0 ]; then
+    # Set up your session
+    tmux new -s "main"
+  fi
+  exec tmux attach -t "main"
+fi
+
 command_not_found_handler() {
     print -P "%F{13}-- what even is $@?%f"
     return 127
@@ -66,6 +78,7 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # aliases
+alias ls="eza"
 alias l="ls -a"
 alias la="ls -la"
 alias cls="clear"
@@ -81,6 +94,7 @@ export PATH="$PATH:/Users/sally/.cargo/bin"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="$PATH:/Users/sally/.config/emacs/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/qt@6/bin:$PATH"
 
 export CMAKE_PREFIX_PATH="/Users/sally/.local/library/libs:$CMAKE_PREFIX_PATH"
 
@@ -90,3 +104,5 @@ export XDG_CONFIG_HOME="/Users/sally/.config"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+
+export PATH=$PATH:/Users/sally/.spicetify

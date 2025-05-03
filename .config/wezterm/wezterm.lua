@@ -1,5 +1,5 @@
 wezterm = require("wezterm")
-local mappings = require("modules.mappings")
+-- local mappings = require("modules.mappings")
 
 -- Show which key table is active in the status area
 wezterm.on("update-right-status", function(window, pane)
@@ -21,8 +21,8 @@ return {
 	},
 	-- font
 	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular" }),
-	font_size = 16,
-	line_height = 1.2,
+	font_size = 13,
+	line_height = 1.0,
 	window_background_opacity = 1.0,
 	-- freetype_load_flags = "NO_HINTING",
 	-- front_end = "OpenGL",
@@ -32,19 +32,19 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	tab_max_width = 999999,
 	window_padding = {
-		left = 10,
-		right = 10,
-		top = 10,
-		bottom = 10,
+		left = 2,
+		right = 2,
+		top = 3,
+		bottom = 3,
 	},
-	window_decorations = "RESIZE",
+	window_decorations = "TITLE|RESIZE",
 	inactive_pane_hsb = {
 		brightness = 0.7,
 	},
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = true,
 	-- key bindings
-	leader = mappings.leader,
-	keys = mappings.keys,
-	key_tables = mappings.key_tables,
+	-- leader = mappings.leader,
+	-- keys = mappings.keys,
+	-- key_tables = mappings.key_tables,
 }
