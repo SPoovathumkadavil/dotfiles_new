@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $INFO
+
 source "${CONFIG_DIR}/colors.sh"
 
 PLAYER="$(echo "$INFO" | jq -r '.app')"

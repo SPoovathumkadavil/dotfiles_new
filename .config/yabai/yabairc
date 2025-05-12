@@ -36,7 +36,7 @@ yabai -m space 4 --display 2 --label 4
 yabai -m space 5 --display 2 --label 5
 yabai -m space 6 --display 2 --label 6
 
-yabai -m config external_bar all:35:0
+yabai -m config external_bar all:37:0
 
 yabai -m config top_padding "${gaps["top"]}"
 yabai -m config bottom_padding "${gaps["bottom"]}"
@@ -77,9 +77,8 @@ yabai -m rule --add title="^music~kew$" sticky=on
 # show digital colour meter topmost and on all spaces
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 yabai -m rule --add app="^Music$" sticky=off manage=off
+yabai -m rule --add app="^Music MiniPlayer$" sticky=off manage=off
 
 # yabai -m signal --add event=display_changed action="${spaces_refresh_command}"
 # yabai -m signal --add event=space_changed action="${spaces_refresh_command}"
 # yabai -m signal --add event=system_woke action="sleep 2; sketchybar --reload"
-
-borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0 &

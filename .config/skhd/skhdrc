@@ -34,15 +34,16 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
 
 # applications
-alt - a : open -a Arc
-alt - return : open -na Alacritty
-# alt - return : open -a Ghostty
-# alt - return : open -na WezTerm
+alt - a : /usr/bin/open -a Arc
+# alt - s : /usr/bin/open -a Safari
+alt - return : /usr/bin/open -na Alacritty
+# alt - return : /usr/bin/open -a Ghostty
+# alt - return : /usr/bin/open -na WezTerm
 
 # open kew :D
-alt - m : zsh -c "alacritty -T music~kew -e attach_music"
+# alt - m : zsh -c "alacritty -T music~kew -e attach_music"
 # alt - m : zsh -c "wezterm start -e attach_music"
-
+alt - m : zsh -c "audacious"
 
 # open btop
 alt - t : zsh -c "alacritty -T btop -e btop"

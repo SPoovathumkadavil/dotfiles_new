@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FOCUSED_APP=$(yabai -m query --windows --window | jq -r '.app')
+FOCUSED_APP=$(yabai -m query --windows --window | jq -r '.title')
 
 if [[ -z "$FOCUSED_APP" ]]; then
   LABEL_DRAWING="off"

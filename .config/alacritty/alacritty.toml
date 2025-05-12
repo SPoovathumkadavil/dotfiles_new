@@ -5,13 +5,13 @@ live_config_reload = true
 
 [window]
 
-padding = { x = 5, y = 3 }
+padding = { x = 5, y = 0 }
 decorations = "Full"
 opacity = 1.00
 
 [font]
 
-normal = { family = "JetBrainsMono Nerd Font" }
+normal = { family = "Monaco Nerd Font Mono" }
 size = 13
 
 # Colors (Gruvbox Material Hard Dark)
@@ -108,3 +108,9 @@ color = "#fab387"
 [[colors.indexed_colors]]
 index = 17
 color = "#f5e0dc"
+
+[terminal]
+shell = { program = "/opt/homebrew/bin/nu", args = [
+  "--config \"/Users/sally/.config/nushell/config.nu\"",
+  "--env-config \"/Users/sally/.config/nushell/env.nu\"",
+] }
