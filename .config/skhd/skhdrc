@@ -5,6 +5,9 @@ alt - 3 : yabai -m space --focus 3
 alt - 4 : yabai -m space --focus 4
 alt - 5 : yabai -m space --focus 5
 alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
 alt - tab : yabai -m space --focus recent
 
 shift + alt - 1 : yabai -m window --space 1
@@ -14,6 +17,8 @@ shift + alt - 4 : yabai -m window --space 4
 shift + alt - 5 : yabai -m window --space 5
 shift + alt - 6 : yabai -m window --space 6
 shift + alt - 7 : yabai -m window --space 7
+shift + alt - 8 : yabai -m window --space 8
+shift + alt - 9 : yabai -m window --space 9
 shift + alt - tab : yabai -m window --space recent
 
 alt - h : yabai -m window --focus west
@@ -28,7 +33,7 @@ shift + alt - l : yabai -m window --swap east
 
 alt - w : yabai -m window --toggle float; yabai -m window --toggle border; yabai -m window --grid 4:4:1:1:2:2
 
-alt - q : yabai -m window --close
+alt - q : kill_last_instance
 
 alt - f : yabai -m window --toggle zoom-fullscreen
 shift + alt - f : yabai -m window --toggle native-fullscreen
@@ -36,9 +41,14 @@ shift + alt - f : yabai -m window --toggle native-fullscreen
 # applications
 alt - a : /usr/bin/open -a Arc
 # alt - s : /usr/bin/open -a Safari
-alt - return : /usr/bin/open -na Alacritty
+# alt - return : /usr/bin/open -na Alacritty
+# shift + alt - return : NO_TMUX=yes /usr/bin/open -na Alacritty
 # alt - return : /usr/bin/open -a Ghostty
 # alt - return : /usr/bin/open -na WezTerm
+# alt - return : command /Applications/WezTerm.app/Contents/MacOS/wezterm-gui start --always-new-process
+# shift + alt - return : NO_TMUX=yes /Applications/WezTerm.app/Contents/MacOS/wezterm-gui start --always-new-process
+alt - return : zsh -c "kitty"
+shift + alt - return : zsh -c "NO_TMUX=yes kitty"
 
 # open kew :D
 # alt - m : zsh -c "alacritty -T music~kew -e attach_music"
@@ -46,6 +56,9 @@ alt - return : /usr/bin/open -na Alacritty
 alt - m : zsh -c "audacious"
 
 # open btop
-alt - t : zsh -c "alacritty -T btop -e btop"
+# alt - t : zsh -c "alacritty -T btop -e btop"
+alt - t : zsh -c "kitty -T btop -e btop"
+# alt -t : command /Applications/WezTerm.app/Contents/MacOS/wezterm-gui start --always-new-process -- btop
+
 
 ctrl + alt + cmd - r : yabai --restart-service

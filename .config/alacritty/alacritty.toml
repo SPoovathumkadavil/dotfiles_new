@@ -108,9 +108,3 @@ color = "#fab387"
 [[colors.indexed_colors]]
 index = 17
 color = "#f5e0dc"
-
-[terminal]
-shell = { program = "/opt/homebrew/bin/nu", args = [
-  "--config \"/Users/sally/.config/nushell/config.nu\"",
-  "--env-config \"/Users/sally/.config/nushell/env.nu\"",
-] }

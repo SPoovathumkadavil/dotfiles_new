@@ -78,6 +78,7 @@ yabai -m rule --add title="^music~kew$" sticky=on
 yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
 yabai -m rule --add app="^Music$" sticky=off manage=off
 yabai -m rule --add app="^Music MiniPlayer$" sticky=off manage=off
+yabai -m rule --add app="^Finder$" manage=off
 
 # yabai -m signal --add event=display_changed action="${spaces_refresh_command}"
 # yabai -m signal --add event=space_changed action="${spaces_refresh_command}"

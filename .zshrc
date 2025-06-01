@@ -1,5 +1,5 @@
 
-if [[ ! -v TMUX && $TERM_PROGRAM != "vscode" ]]; then
+if [[ ! -v TMUX && $TERM_PROGRAM != "vscode" && $NO_TMUX != "yes" ]]; then
   # output_names=($(tmux list-sessions -F\#S))
   # exec tmux attach -t "${output_names[0]}"
   tmux has-session -t "main" 2>/dev/null
