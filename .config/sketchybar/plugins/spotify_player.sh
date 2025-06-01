@@ -1,3 +1,1 @@
-#!/bin/sh
-
-$HOME/.cargo/bin/spotify_player playback play-pause
+../../../.dotfiles/.config/sketchybar/plugins/spotify_player.sh
